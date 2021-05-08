@@ -1,10 +1,3 @@
-//receber valor como string
-//criar array
-
-//atribuir valor ao array
-//inverter array
-//devolver valor invertido como BigInt
-
 const number = 9876543210;
 
 //const numberAsString = number.toString();
@@ -19,43 +12,29 @@ const number = 9876543210;
 // }
 // inverter(number);
 
-function inverter(number) {
-    let numberAsString = number.toString().split('').reverse().join('');  
-    return console.log(numberAsString);
-}
-inverter(number);
-
-// const nome = 'magda'
-
-// console.log(nome.split('').reverse().join(''));
-
-
-
-// console.log(number);
-// console.log(numberAsString);
-
-
-
-
-
-
-
-// function logArgs(...args){
-//     const stringAsNumber = [...args];
-//     console.log(stringAsNumber.reverse());    
+// function inverter(number) {
+//     let numberAsString = number.toString().split('').reverse().join('');  
+//     return console.log(numberAsString);
 // }
+// inverter(number);
 
-// logArgs(...number);
 
-
-//logArgs(...string);
-
-// const stringAsNumber = string.parseInt(string);
-
-// console.log(stringAsNumber);
-
-// const rene = [];
+const valor = 576;
 
 
 
-// console.log(rene.reverse());
+
+function numberOfNotes(valor) {
+    const notes = [100, 50, 20, 10, 5, 2, 1];
+    let rest = valor;    
+    for (let i = 0; i < notes.length; i++) {
+        if ((rest / notes[i]) >= 0) {     
+            let integer = rest / notes[i];            
+            console.log(`${Math.floor(integer)} nota(s) de R$ ${notes[i]} `);
+            rest = valor % notes[i];
+        }
+    }
+}
+console.log(valor);
+numberOfNotes(valor);
+//console.log(rest);
